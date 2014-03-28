@@ -20,7 +20,9 @@ In `app/js/services.js` file you need to update the
 following lines of code to point to your Jenkins box:
 
 ```javascript
+// the host:port of the server running the ruby server
 .value('localUri', 'localhost:4567')
+// the host:port of the jenkins server
 .value('baseUri', 'localhost:8080')
 ```
 
