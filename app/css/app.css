@@ -1,0 +1,352 @@
+body {
+	font-family: Arial;
+	font-size: 14px;
+	margin: 0; 
+	padding: 0;
+	position: relative;
+}
+a {
+	cursor: pointer;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+
+
+.jenkins--top--wrapper {
+	background-color: #2c2c2c;
+	background-images: -moz-linear-gradient(center top , #333333, #222222);
+	background-repeat: repeat-x;
+	transform: translateZ(0px);
+	transition: all 0.3s ease 0s;
+	border-bottom: 1px solid #111111;
+	height: 49px;
+	left: 0;
+	margin: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+	z-index: 400;
+}
+
+.jenkins--top--wrapper span {
+	margin: 10px 0 0 10px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	display: block;
+}
+
+.jenkins {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding-top: 50px;
+}
+
+table.jenkins--table tr:hover td {
+	background-color: #f7f7f7;
+}
+
+table.jenkins--table tr:nth-child(odd):hover td {
+	background-color: #EDEDED;
+}
+
+.jenkins--header a {
+	color: #000;
+	text-decoration: none;
+}
+
+.jenkins--header a:hover {
+	text-decoration: underline;
+}
+
+
+.jenkins--title--job-status {
+	font-size: 18px;
+	color: #fff;
+	display: inline-block;
+	float: right;
+	padding: 10px 30px;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+
+.jenkins--title--job-status span {
+	font-weight: bold;
+}
+
+.jenkins--success > .jenkins--title--job-status {
+	background-color: #6BA801;
+}
+
+.jenkins--progressing > .jenkins--title--job-status {
+	background-color: #fbc92f;
+	-webkit-animation: blink 1.5s linear infinite;
+	-moz-animation: blink 1.5s linear infinite;
+	-ms-animation: blink 1.5s linear infinite;
+	-o-animation: blink 1.5s linear infinite;
+	animation: blink 1.5s linear infinite;
+}
+
+.jenkins--failure > .jenkins--title--job-status {
+	background-color: #c83333;
+	-webkit-animation: blink 1.5s linear infinite;
+	-moz-animation: blink 1.5s linear infinite;
+	-ms-animation: blink 1.5s linear infinite;
+	-o-animation: blink 1.5s linear infinite;
+	animation: blink 1.5s linear infinite;
+}
+
+.jenkins table {
+	width: 100%;
+	margin: 0;
+}
+
+.jenkins table tr td{
+	padding: 10px;
+}
+
+.jenkins tr.jenkins--header td {
+	background-color: #f0f0f0;
+}
+
+.jenkins tr.jenkins--data.jenkins--nested td,
+.jenkins tr.jenkins--data.jenkins--nested:nth-child(odd) td {
+	background-color: #f0f0f0;
+	padding-left: 40px;
+	border: none;
+	opacity: .8;
+}
+
+.jenkins tr.jenkins--data td {
+	background-color: #fff;
+	color: #929292;
+	border-top: 1px solid #f0f0f0;
+}
+
+.jenkins tr:last-child td {
+	border-bottom: 2px solid #e4e4e4;
+}
+
+.jenkins tr.jenkins--data:nth-child(odd) td {
+	background-color: #fcfcfc;
+}
+
+.jenkins--arrow-down {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #ccc;
+	margin-left: 5px;
+}
+
+.jenkins--arrow-right {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid #ccc;
+	border-bottom: 6px solid transparent;
+	border-top: 6px solid transparent;
+	margin-left: 5px;
+}
+
+.jenkins--arrow-down:hover {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #929292;
+}
+
+td.jenkins--name, td.jenkins--name--data {
+	width: 60%;
+	white-space:nowrap;
+}
+
+td.jenkins--status, td.jenkins--status--data {
+	width: 15%;
+	white-space:nowrap;
+}
+
+td.jenkins--job-number, td.jenkins--job-number--data {
+	width: 25%;
+	white-space:nowrap;
+}
+
+tr.jenkins--success td.jenkins--status--data span {
+	display: block;
+	padding: 5px 15px;
+	border-radius: 15px;
+	background-color: #6ba801;
+	text-align: center;
+}
+
+td.jenkins--status--data span {
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-right: 15px;
+}
+
+td.jenkins--status--data span {
+	display: block;
+	padding: 5px 20px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+tr.jenkins--failure td.jenkins--status--data span {
+	background-color: #CC4433;
+	-webkit-animation: blink 1.5s linear infinite;
+	-moz-animation: blink 1.5s linear infinite;
+	-ms-animation: blink 1.5s linear infinite;
+	-o-animation: blink 1.5s linear infinite;
+	animation: blink 1.5s linear infinite;
+}
+
+tr.jenkins--nested > td.jenkins--status--data > span {
+	padding: 2px;
+	font-size: 10px;
+}
+
+tr.jenkins--failure td.jenkins--name--data {
+	color: #c83333;
+}
+
+tr.jenkins--success td.jenkins--name--data {
+	color: #6ba801;
+}
+
+@-moz-keyframes blink {
+	0% { opacity: 1.0; }
+	50% { background-color: #DB5C4E; color: #F77E7E; }
+	100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blink {
+	0% { opacity: 1.0; }
+	50% { background-color: #DB5C4E; }
+	100% { opacity: 1.0; }
+}
+
+ @-o-keyframes blink {
+	0% { opacity: 1.0; }
+	50% { background-color: #DB5C4E; }
+	100% { opacity: 1.0; }
+}
+
+tr.jenkins--progressing td.jenkins--status--data { 
+	position: relative;
+	text-align: center;
+}
+tr.jenkins--progressing td.jenkins--status--data > span {
+	height: 100%;
+	background-color: #ebb03e;
+	position: relative;
+}
+tr.jenkins--progressing td.jenkins--status--data > span:after {
+	content: "";
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background-image: 
+		-webkit-gradient(linear, 0 0, 100% 100%, 
+		color-stop(.25, rgba(255, 255, 255, .2)), 
+		color-stop(.25, transparent), color-stop(.5, transparent), 
+		color-stop(.5, rgba(255, 255, 255, .2)), 
+		color-stop(.75, rgba(255, 255, 255, .2)), 
+		color-stop(.75, transparent), to(transparent)
+		);
+	background-image: 
+		-moz-linear-gradient(-45deg, 
+		rgba(255, 255, 255, .2) 25%, 
+		transparent 25%, 
+		transparent 50%, 
+		rgba(255, 255, 255, .2) 50%, 
+		rgba(255, 255, 255, .2) 75%, 
+		transparent 75%, 
+		transparent
+		);
+	background-image: 
+	-moz-linear-gradient(
+	  -45deg, 
+      rgba(255, 255, 255, .2) 25%, 
+      transparent 25%, 
+      transparent 50%, 
+      rgba(255, 255, 255, .2) 50%, 
+      rgba(255, 255, 255, .2) 75%, 
+      transparent 75%, 
+      transparent
+   );
+	
+		background-image: 
+	-ms-linear-gradient(
+	-45deg, 
+	rgba(255, 255, 255, .2) 25%, 
+	transparent 25%, 
+	transparent 50%, 
+	rgba(255, 255, 255, .2) 50%, 
+	rgba(255, 255, 255, .2) 75%, 
+	transparent 75%, 
+	transparent
+	);
+	
+	background-image: 
+	-o-linear-gradient(
+	-45deg, 
+	rgba(255, 255, 255, .2) 25%, 
+	transparent 25%, 
+	transparent 50%, 
+	rgba(255, 255, 255, .2) 50%, 
+	rgba(255, 255, 255, .2) 75%, 
+	transparent 75%, 
+	transparent
+	);
+	z-index: 1;
+	animation: 2s linear 0s normal none infinite move;
+	-webkit-animation: move 2s linear infinite;
+	-webkit-background-size: 50px 50px;
+	-moz-background-size: 50px 50px;
+	background-size: 50px 50px;
+	-webkit-animation: move 2s linear infinite;
+	overflow: hidden;
+}
+
+@-webkit-animation expandWidth {
+	0% { width: 0; }
+	100% { width: auto; }
+}
+
+@-webkit-keyframes move {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 50px 50px;
+	}
+}
+
+@-moz-keyframes move {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 50px 50px;
+	}
+}	
+
+.orange > span {
+	background-color: #f5a50a;
+}
