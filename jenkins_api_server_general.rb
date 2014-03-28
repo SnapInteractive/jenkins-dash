@@ -16,7 +16,7 @@ before do
 end
 
 get "/job_info/multi_jobs" do
-  multi_job_names = ["GoingLive", "SeleniumFOF", "SeleniumAYIPayments", "MergeatronSha"]
+  multi_job_names = []
   jobs = []
   for i in 0..multi_job_names.length-1
     job_name = multi_job_names[i]
