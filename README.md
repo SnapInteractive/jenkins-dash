@@ -38,6 +38,8 @@ get "/job_info/multi_jobs" do
   multi_job_names = ["JobName1","JobName2"]
 ```
   
-
+License: Apache 2.0
+2014-03-28
+Snap-Interactive Inc.
 
 
