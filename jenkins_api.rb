@@ -1,4 +1,4 @@
-$client = JenkinsApi::Client.new(:server_ip => '10.42.1.40')
+$client = JenkinsApi::Client.new(:server_ip => '')
 
 def get_current_build_status_for_job(job_name)
   return $client.job.get_current_build_status(job_name)
