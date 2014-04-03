@@ -37,6 +37,21 @@ have setup in jenkins. In order to see this you must update the following code
 get "/job_info/multi_jobs" do
   multi_job_names = ["JobName1","JobName2"]
 ```
+
+### Set the Jenkins IP for your server 
+In file jenkins_api.rb the very first line, 
+update with the ip of their Jenkins box
+
+```ruby
+$client = JenkinsApi::Client.new(:server_ip => '')
+```
+
+If the jenkins box requires username and password you can add that as well
+
+```ruby
+$client = JenkinsApi::Client.new(:server_ip => '',
+        :username => 'somename', :password => 'secret password')
+``` 
   
 License: Apache 2.0
 2014-03-28
