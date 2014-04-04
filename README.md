@@ -5,6 +5,8 @@ Having looked long and far it was very difficult to find a good dashboard to
 for display the statuses of your jenkins job. So I decided to create on of
 my own.
 
+![Jenkins-Dash](https://github.com/SnapInteractive/jenkins-dash/raw/master/assets/screenshot.png)
+
 How it works:
 
 1. This is a Ruby backend so you need to have Ruby installed
